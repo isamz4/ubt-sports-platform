@@ -1,23 +1,18 @@
 # UBT Sports Management Platform
 
-A prototype web platform for managing UBT sports scholarships, student/athlete profiles, performance indicators, reports, Excel imports, and audit logs.
-
-## Developed by
-**ENG. HOSSAM ALHUSSAIN**
+منصة إدارة رياضية أولية لجامعة الأعمال والتكنولوجيا، تشمل المنح الرياضية، مؤشر الأداء، الطلاب والطالبات، الإقرار الإلكتروني، التقارير، الاستيراد من Excel، وسجل العمليات.
 
 ## Version
-**1.0.0 — Dean Demo / Mobile Interactive**
+1.1.0
 
-## Features
-- Admin dashboard
-- Separate students and female students indicators
-- Performance indicator comparison with smart insights
-- Scholarship student profiles and history
-- Electronic scholarship agreement concept
-- Excel import preview
-- Reports export UI
-- Audit Log UI
-- Mobile-ready responsive layout
+## Developed by
+ENG. HOSSAM ALHUSSAIN
 
-## Deployment
-This project can be deployed for free with GitHub Pages.
+## GitHub Pages
+ارفع كل الملفات في هذا المجلد إلى المستودع، ثم فعّل Pages من الفرع `main` والمجلد `/root`.
+
+
+## Version 1.2.0
+- Added Saudi Universities Sports Federation calendar import module.
+- Added vacancy publishing workflow for students and female students.
+- Added calendar audit log actions and preview cards.

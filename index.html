@@ -13,6 +13,9 @@
 
 .roleCards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}.roleCard{background:#fff;border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:var(--shadow)}.roleCard b{color:var(--navy)}.roleTag{display:inline-block;margin-top:10px;border-radius:999px;padding:6px 10px;background:#eef5ff;color:var(--navy);font-weight:800;font-size:12px}.filters{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:12px;margin-bottom:14px}.profileHead{display:grid;grid-template-columns:1.2fr repeat(4,1fr);gap:12px;margin:14px 0}.profileTile{background:#f8fafc;border:1px solid var(--line);border-radius:18px;padding:14px}.profileTile span{display:block;color:#667085;font-size:12px;margin-bottom:6px}.profileTile b{color:var(--navy)}.pdfBox{height:620px;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#f8fafc}.pdfBox embed,.pdfBox iframe{width:100%;height:100%;border:0}.checkline{display:flex;gap:8px;align-items:center;margin:10px 0;color:#344054}.checkline input{width:auto}.detailTable td,.detailTable th{font-size:14px}.permission{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}.permission .card{padding:18px}.permission .bigNum{font-size:24px}
 .roleSwitch{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 18px}.roleSwitch .tab{font-weight:800}.mode-students{--navy:#062a63;--navy2:#001b46;--blue:#0b5ed7;--sky:#eef5ff}.mode-females{--navy:#8c1238;--navy2:#5b0824;--blue:#b21f3a;--sky:#fff0f4}.mode-general{--navy:#062a63;--navy2:#001b46;--blue:#0b5ed7;--sky:#eef5ff}
+
+.calendarPreview{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0}.calendarCard{background:#f8fafc;border:1px solid var(--line);border-radius:18px;padding:15px}.calendarCard span{display:block;color:#667085;font-size:13px;margin-bottom:7px}.calendarCard b{font-size:24px;color:var(--navy)}.vacancyCards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.vacancy{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow)}.vacancy h3{margin:0 0 10px;color:var(--navy)}.vacancy p{margin:6px 0;color:#667085}.sourceBox{background:#eef5ff;border:1px dashed #bdd4ff;border-radius:20px;padding:16px;line-height:1.8;color:#062a63}.statusDraft{background:#fff3df;color:#bd6b00}.statusPublished{background:#e7f8ee;color:#098445}.statusReview{background:#ffe8ee;color:#b21f3a}
+
 @media(max-width:1200px){.app{grid-template-columns:1fr}.sidebar{position:relative;height:auto}.kpis,.indicatorGrid{grid-template-columns:repeat(2,1fr)}.two,.three,.actions,.split{grid-template-columns:1fr}.topbar{display:block}.logos{margin:15px 0}}
 
 .mode-females .sidebar{background:linear-gradient(180deg,#8c1238,#4b071f)}
@@ -81,6 +84,7 @@
   <button data-page="dashboard" class="active"><span class="qicon">🏠</span><span>الرئيسية</span></button>
   <button data-page="students"><span class="qicon">👥</span><span>الطلاب</span></button>
   <button data-page="indicator"><span class="qicon">📊</span><span>المؤشر</span></button>
+  <button data-page="calendar"><span class="qicon">📅</span><span>الروزنامة</span></button>
   <button data-page="reports"><span class="qicon">📈</span><span>التقارير</span></button>
   <button data-page="import"><span class="qicon">⬆️</span><span>استيراد</span></button>
 </nav>
@@ -94,12 +98,14 @@
     <button class="navbtn" data-page="scholarships"><span class="navicon">🎓</span>المنح الرياضية</button>
     <button class="navbtn" data-page="students"><span class="navicon">👥</span>الطلاب الرياضيون</button>
     <button class="navbtn" data-page="activities"><span class="navicon">🏆</span>البطولات والأنشطة</button>
+    <button class="navbtn" data-page="calendar"><span class="navicon">📅</span>روزنامة الاتحاد</button>
     <button class="navbtn" data-page="indicator"><span class="navicon">📊</span>مؤشر الأداء</button>
     <button class="navbtn" data-page="agreement"><span class="navicon">✍️</span>الإقرار الإلكتروني</button>
     <button class="navbtn" data-page="evidence"><span class="navicon">📁</span>مركز الشواهد</button>
     <button class="navbtn" data-page="reports"><span class="navicon">📈</span>التقارير</button>
     <button class="navbtn" data-page="import"><span class="navicon">⬆️</span>استيراد Excel</button>
     <button class="navbtn" data-page="audit"><span class="navicon">🧾</span>سجل العمليات</button>
+    <button class="navbtn" data-page="roadmap"><span class="navicon">🧭</span>خارطة التطوير</button>
     <div class="sideFoot"><div style="font-weight:800;color:#fff;margin-bottom:6px">Designed & Developed by</div><div style="font-size:15px;font-weight:900;letter-spacing:.4px;color:#fff">ENG. HOSSAM ALHUSSAIN</div><div style="opacity:.9;margin-top:4px">Software Engineering • UBT Sports Platform</div></div>
   </aside>
   <main class="main">
@@ -156,7 +162,7 @@
 
     <section id="agreement" class="section">
       <div class="split">
-        <div class="card"><h2>نموذج الإقرار الرسمي PDF</h2><p class="sub">يظهر للطالب نفس نموذج الإقرار الرسمي، وبجانبه يعبئ الخانات المطلوبة ويوقع إلكترونيًا.</p><div class="pdfBox"><embed src="نموذج الاقرارِ والتعهد الخاص بمنح المتميزين رياضياً.pdf" type="application/pdf"></div></div>
+        <div class="card"><h2>نموذج الإقرار الرسمي PDF</h2><p class="sub">يظهر للطالب نفس نموذج الإقرار الرسمي، وبجانبه يعبئ الخانات المطلوبة ويوقع إلكترونيًا.</p><div class="pdfBox"><embed src="assets/agreement.pdf#toolbar=0&navpanes=0" type="application/pdf"></div><p class="sub" style="margin-top:10px">إذا لم يظهر ملف PDF داخل المتصفح: <a href="assets/agreement.pdf" target="_blank">افتح نموذج الإقرار الرسمي</a></p></div>
         <div class="card"><h2>بيانات الإقرار الإلكتروني</h2><div class="formGrid" style="grid-template-columns:1fr 1fr"><input placeholder="اسم الطالب / الطالبة"><input placeholder="الرقم الجامعي"><input placeholder="بطاقة أحوال / إقامة"><input placeholder="الجنسية"><input placeholder="رقم الجوال"><input type="date"><select><option>طالب</option><option>طالبة</option></select><select><option>نسبة المنحة المتوقعة</option><option>10%</option><option>20%</option><option>30%</option></select></div><label class="checkline"><input type="checkbox"> أقر بأنني اطلعت على كامل معايير وشروط المنح الجزئية للطلبة الرياضيين.</label><label class="checkline"><input type="checkbox"> أوافق على أن استحقاق الخصم مرتبط بتحقق المعايير والشروط.</label><h2 style="margin-top:18px">توقيع الطالب</h2><canvas id="signature"></canvas><div style="display:flex;gap:10px;margin-top:12px"><button class="btn light" id="clearSig">مسح التوقيع</button><button class="btn green">اعتماد الإقرار وحفظه في ملف الطالب</button></div><div class="notice">بعد الاعتماد يتم حفظ الإقرار داخل ملف الطالب، وتظهر الحالة: “تم توقيع التعهد”.</div></div>
       </div>
     </section>
@@ -179,6 +185,20 @@
       <div class="card" style="margin-top:18px"><h2>معاينة التقرير التنفيذي</h2><div class="tableWrap"><table><thead><tr><th>البند</th><th>طلاب</th><th>طالبات</th><th>ملاحظة</th></tr></thead><tbody><tr><td>نسبة تحقيق المؤشر</td><td>82%</td><td>78%</td><td>الطلاب متقدمون بـ 4%</td></tr><tr><td>المتبقي للوصول للهدف</td><td>2,850</td><td>3,120</td><td>الطالبات تحتاج تركيز على البطولات الوطنية</td></tr><tr><td>شواهد ناقصة</td><td>3</td><td>4</td><td>تحتاج متابعة قبل الرفع النهائي</td></tr></tbody></table></div></div>
     </section>
 
+
+    <section id="calendar" class="section">
+      <div class="card"><h2>استيراد روزنامة الاتحاد السعودي للرياضة الجامعية</h2><p class="sub">ارفع الروزنامة السنوية بصيغة Excel / CSV / PDF، والنظام يحول البطولات تلقائيًا إلى شواغر قابلة للنشر للطلاب أو الطالبات حسب الفرع والتاريخ والمكان.</p>
+        <div class="sourceBox"><b>الفكرة:</b> بدل إدخال كل بطولة يدويًا، يتم سحب اسم البطولة، اللعبة، الفرع، التاريخ، المدينة، المكان، نوع البطولة، آخر موعد تسجيل، وعدد المقاعد، ثم تظهر للطلاب كشاغر يمكن التقديم عليه.</div>
+        <div class="importDrop"><p style="font-size:42px;margin:0">📅</p><h2>ارفع ملف روزنامة الاتحاد</h2><p class="sub">الأعمدة المتوقعة: اسم البطولة، اللعبة، الفرع، التاريخ، المدينة، المكان، نوع البطولة، آخر موعد تسجيل، المقاعد.</p><label for="calendarFile">اختيار ملف الروزنامة</label><input id="calendarFile" type="file" accept=".xlsx,.xls,.csv,.pdf" onchange="simulateCalendarImport(this)"></div>
+        <div id="calendarPreview" style="display:none"><div class="calendarPreview"><div class="calendarCard"><span>إجمالي البطولات</span><b id="cTotal">24</b></div><div class="calendarCard"><span>جاهزة للنشر</span><b id="cReady">21</b></div><div class="calendarCard"><span>تحتاج مراجعة</span><b id="cReview">3</b></div><div class="calendarCard"><span>طلاب / طالبات</span><b>12 / 12</b></div></div>
+        <div class="card" style="box-shadow:none;background:#f8fafc"><h2>مطابقة أعمدة الروزنامة</h2><div class="mapGrid"><div class="mapItem"><span>Excel</span><b>Competition Name → اسم البطولة</b></div><div class="mapItem"><span>Excel</span><b>Sport → اللعبة</b></div><div class="mapItem"><span>Excel</span><b>Gender/Branch → طلاب / طالبات</b></div><div class="mapItem"><span>Excel</span><b>Date/Location → التاريخ والمكان</b></div></div></div>
+        <div class="filters"><input id="calendarSearch" placeholder="بحث باسم البطولة أو اللعبة" oninput="filterCalendarRows()"><select id="calendarBranch" onchange="filterCalendarRows()"><option value="all">كل الفروع</option><option value="طلاب">طلاب</option><option value="طالبات">طالبات</option></select><select><option>موسم 2026-2027</option><option>موسم 2025-2026</option></select><select><option>كل الحالات</option><option>جاهزة للنشر</option><option>تحتاج مراجعة</option></select></div>
+        <div class="tableWrap"><table><thead><tr><th>البطولة</th><th>اللعبة</th><th>الفرع</th><th>التاريخ</th><th>المكان</th><th>آخر تسجيل</th><th>الحالة</th></tr></thead><tbody id="calendarRows"></tbody></table></div>
+        <div class="exportBar"><button class="btn green" onclick="publishCalendar()">اعتماد الروزنامة ونشرها كشواغر</button><button class="btn light" onclick="saveCalendarDraft()">حفظ كمسودة</button><button class="btn light" onclick="downloadCalendarTemplate()">تحميل نموذج Excel</button></div></div>
+      </div>
+      <div class="card" style="margin-top:18px"><h2>معاينة الشواغر كما ستظهر للطلاب</h2><div class="vacancyCards" id="vacancyPreview"></div></div>
+    </section>
+
     <section id="import" class="section">
       <div class="card"><h2>استيراد بيانات المنح من Excel</h2><p class="sub">ارفع ملف Excel، والنظام يعطيك معاينة قبل الاعتماد: عدد السجلات، المكرر، الناقص، والجاهز للاستيراد.</p>
         <div class="importDrop"><p style="font-size:42px;margin:0">📤</p><h2>اسحب ملف Excel هنا أو اختر الملف</h2><p class="sub">يدعم أعمدة: الاسم، الرقم الجامعي، الكلية، الجوال، الجنس، البطولة، السنة، المركز، النسبة، حالة الإقرار.</p><label for="excelFile">اختيار ملف Excel</label><input id="excelFile" type="file" accept=".xlsx,.xls,.csv" onchange="simulateImport(this)"></div>
@@ -193,7 +213,24 @@
       <div class="card"><h2>Audit Log - سجل العمليات</h2><p class="sub">كل تعديل أو استيراد أو تصدير يتسجل باسم المستخدم والصلاحية والتاريخ، عشان يكون عندنا شفافية كاملة.</p><div class="filters"><input placeholder="بحث في السجل"><select><option>كل المستخدمين</option><option>Admin الطلاب</option><option>Admin الطالبات</option><option>المسؤول</option></select><select><option>كل العمليات</option><option>استيراد Excel</option><option>تعديل منحة</option><option>تصدير تقرير</option></select><select><option>موسم 2025-2026</option></select></div></div>
       <div class="card" style="margin-top:18px"><div id="auditList"></div></div>
     </section>
-    <div class="footerNote">UBT Sports Management Platform • Version 1.0.0 • Designed & Developed by <b>ENG. HOSSAM ALHUSSAIN</b></div>
+    <section id="roadmap" class="section">
+      <div class="card"><h2>خارطة تطوير المنصة</h2><p class="sub">هذه أفكار المرحلة القادمة لو اعتمد العميد المشروع، وهي مقسمة حسب الأولوية عشان يتحول البروتايب إلى نظام فعلي.</p></div>
+      <div class="grid three" style="margin-top:18px">
+        <div class="card"><h2>المرحلة 1 — اعتماد MVP</h2><p class="sub">تثبيت الصلاحيات، فصل الطلاب والطالبات، ربط الإقرار، ملفات الطلاب، المؤشر، التقارير، وسجل العمليات.</p><span class="badge bgreen">جاهز كبروتايب</span></div>
+        <div class="card"><h2>المرحلة 2 — قاعدة البيانات</h2><p class="sub">تحويل البيانات من Demo إلى Database حقيقية، مع رفع Excel فعلي، حفظ الشواهد، وتعديل السجلات بصلاحيات.</p><span class="badge borange">بعد الاعتماد</span></div>
+        <div class="card"><h2>المرحلة 3 — الإطلاق</h2><p class="sub">استضافة رسمية، دخول بحسابات الجامعة، نسخ احتياطي، تقارير PDF حقيقية، وإضافة PWA للجوال.</p><span class="badge bblue">إطلاق رسمي</span></div>
+      </div>
+      <div class="card" style="margin-top:18px"><h2>مميزات مقترحة للإصدار القادم</h2><div class="tableWrap"><table><thead><tr><th>الميزة</th><th>الفائدة</th><th>الأولوية</th></tr></thead><tbody>
+      <tr><td>Login Roles حقيقي</td><td>مسؤول الطلاب يرى الطلاب فقط، مسؤولة الطالبات ترى الطالبات فقط، المسؤول والعميد يرون الكل</td><td><span class="badge bred">عالية</span></td></tr>
+      <tr><td>Student Timeline</td><td>عرض كل مشاركات الطالب/الطالبة حسب الموسم والبطولة والإنجاز والشواهد</td><td><span class="badge bred">عالية</span></td></tr>
+      <tr><td>Evidence Checklist</td><td>قائمة تحقق لكل مجال من المؤشر حتى لا تنقص الشواهد وقت الرفع النهائي</td><td><span class="badge bred">عالية</span></td></tr>
+      <tr><td>Smart Reports</td><td>تقرير تنفيذي جاهز للعميد يلخص المنح، المؤشر، المتبقي، والفرص السريعة للتحسين</td><td><span class="badge borange">متوسطة</span></td></tr>
+      <tr><td>Notifications</td><td>تنبيه عند نقص شاهد، تأخر إقرار، أو اقتراب موعد بطولة</td><td><span class="badge borange">متوسطة</span></td></tr>
+      <tr><td>استيراد روزنامة الاتحاد</td><td>رفع الروزنامة السنوية وتحويلها تلقائيًا إلى شواغر للطلاب والطالبات مع التواريخ والمقاعد</td><td><span class="badge bgreen">مضاف في V1.2</span></td></tr>
+      <tr><td>Database Backup</td><td>حفظ نسخة احتياطية تلقائية للبيانات والمرفقات</td><td><span class="badge bblue">لاحقًا</span></td></tr>
+      </tbody></table></div></div>
+    </section>
+    <div class="footerNote">UBT Sports Management Platform • Version 1.2.0 • Designed & Developed by <b>ENG. HOSSAM ALHUSSAIN</b></div>
   </main>
 </div>
 
@@ -344,6 +381,36 @@ function bindIndicatorFilters(){
 bindIndicatorFilters();
 const canvas=document.getElementById('signature'),ctx=canvas.getContext('2d');function resize(){canvas.width=canvas.offsetWidth*2;canvas.height=180*2;ctx.lineWidth=4;ctx.lineCap='round';ctx.strokeStyle='#062a63'}resize();let drawing=false;function pos(e){let r=canvas.getBoundingClientRect(),p=e.touches?e.touches[0]:e;return {x:(p.clientX-r.left)*2,y:(p.clientY-r.top)*2}}canvas.onmousedown=canvas.ontouchstart=e=>{drawing=true;let p=pos(e);ctx.beginPath();ctx.moveTo(p.x,p.y);e.preventDefault()};canvas.onmousemove=canvas.ontouchmove=e=>{if(!drawing)return;let p=pos(e);ctx.lineTo(p.x,p.y);ctx.stroke();e.preventDefault()};window.onmouseup=canvas.ontouchend=()=>drawing=false;document.getElementById('clearSig').onclick=()=>ctx.clearRect(0,0,canvas.width,canvas.height);
 
+
+const calendarEvents=[
+ {name:'بطولة كرة القدم للجامعات', sport:'كرة القدم', branch:'طلاب', date:'2026-10-15', location:'الرياض', deadline:'2026-10-01', status:'جاهزة للنشر', seats:22},
+ {name:'بطولة كرة الطائرة للطالبات', sport:'كرة الطائرة', branch:'طالبات', date:'2026-10-22', location:'جدة', deadline:'2026-10-08', status:'جاهزة للنشر', seats:14},
+ {name:'بطولة السباحة', sport:'السباحة', branch:'طلاب', date:'2026-11-03', location:'الدمام', deadline:'2026-10-20', status:'جاهزة للنشر', seats:8},
+ {name:'بطولة ألعاب القوى للطالبات', sport:'ألعاب القوى', branch:'طالبات', date:'2026-11-14', location:'مكة', deadline:'2026-10-30', status:'تحتاج مراجعة', seats:10},
+ {name:'بطولة كرة السلة', sport:'كرة السلة', branch:'طلاب', date:'2026-12-02', location:'جدة', deadline:'2026-11-18', status:'جاهزة للنشر', seats:12},
+ {name:'بطولة البادل للطالبات', sport:'البادل', branch:'طالبات', date:'2026-12-10', location:'الرياض', deadline:'2026-11-25', status:'جاهزة للنشر', seats:6}
+];
+function renderCalendarRows(list=calendarEvents){
+ const el=document.getElementById('calendarRows'); if(!el) return;
+ el.innerHTML=list.map(e=>`<tr><td>${e.name}</td><td>${e.sport}</td><td><span class="badge ${e.branch==='طلاب'?'bblue':'bred'}">${e.branch}</span></td><td>${e.date}</td><td>${e.location}</td><td>${e.deadline}</td><td><span class="badge ${e.status==='جاهزة للنشر'?'statusPublished':'statusReview'}">${e.status}</span></td></tr>`).join('');
+ renderVacancies(list.filter(e=>e.status==='جاهزة للنشر').slice(0,3));
+}
+function renderVacancies(list){
+ const el=document.getElementById('vacancyPreview'); if(!el) return;
+ el.innerHTML=list.map(e=>`<div class="vacancy"><h3>🏆 ${e.name}</h3><p>📌 ${e.sport} — ${e.branch}</p><p>📍 ${e.location}</p><p>📅 ${e.date}</p><p>⏳ آخر موعد: ${e.deadline}</p><p>👥 المقاعد: ${e.seats}</p><button class="btn light" style="margin-top:10px">تقديم</button></div>`).join('') || '<p class="sub">لا توجد شواغر جاهزة للعرض.</p>';
+}
+function filterCalendarRows(){
+ const q=(document.getElementById('calendarSearch')?.value||'').trim();
+ const b=document.getElementById('calendarBranch')?.value||'all';
+ const list=calendarEvents.filter(e=>(b==='all'||e.branch===b) && (!q || (e.name+e.sport+e.location).includes(q)));
+ renderCalendarRows(list);
+}
+function simulateCalendarImport(input){document.getElementById('calendarPreview').style.display='block'; const name=input.files&&input.files[0]?input.files[0].name:'روزنامة الاتحاد'; renderCalendarRows(); addAudit('تمت معاينة روزنامة الاتحاد',`الملف: ${name} — تم اكتشاف 24 بطولة، 21 جاهزة للنشر، 3 تحتاج مراجعة`)}
+function publishCalendar(){document.getElementById('calendarPreview').style.display='block'; renderCalendarRows(); addAudit('تم اعتماد روزنامة الاتحاد ونشر الشواغر','تم نشر البطولات الجاهزة للطلاب والطالبات حسب الفرع والتاريخ والمقاعد'); alert('تم نشر الشواغر في البروتايب وتسجيل العملية في Audit Log.');}
+function saveCalendarDraft(){addAudit('تم حفظ روزنامة الاتحاد كمسودة','لم يتم نشر الشواغر للطلاب حتى الآن'); alert('تم حفظ الروزنامة كمسودة.');}
+function downloadCalendarTemplate(){addAudit('تم طلب نموذج Excel للروزنامة','سيتم توفير قالب أعمدة الروزنامة في النظام الفعلي'); alert('في النظام الفعلي سيتم تحميل نموذج Excel جاهز.');}
+renderCalendarRows();
+
 const auditSeed=[
  ['01/07/2026 10:35','تم استيراد ملف Excel','بواسطة حسام — المسؤول العام','تمت إضافة 140 سجل، 7 مكرر، 3 ناقص بيانات'],
  ['01/07/2026 10:42','تم تعديل منحة طالب','بواسطة Admin الطلاب','حسام الحسين: من 10% إلى 20% بعد اعتماد بطولة محلية'],
@@ -378,7 +445,7 @@ renderAudit();
 <script>
 // V13 full mobile interactivity: quick nav sync, page title sync, touch-friendly hints
 (function(){
-  const pageNames={dashboard:'الرئيسية',scholarships:'المنح الرياضية',students:'ملفات الطلاب والطالبات',activities:'البطولات والأنشطة',indicator:'مؤشر الأداء',agreement:'الإقرار الإلكتروني',evidence:'شواهد الإنجاز',reports:'التقارير',import:'استيراد Excel',audit:'سجل العمليات'};
+  const pageNames={dashboard:'الرئيسية',scholarships:'المنح الرياضية',students:'ملفات الطلاب والطالبات',activities:'البطولات والأنشطة',calendar:'روزنامة الاتحاد',indicator:'مؤشر الأداء',agreement:'الإقرار الإلكتروني',evidence:'شواهد الإنجاز',reports:'التقارير',import:'استيراد Excel',audit:'سجل العمليات',roadmap:'خارطة التطوير'};
   const quick=document.getElementById('mobileQuickNav');
   const title=document.getElementById('mobilePageTitle');
   const toast=document.getElementById('mobileToast');
