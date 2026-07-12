@@ -12,8 +12,8 @@
   <div class="login-bg"></div>
   <div class="login-card">
     <img src="assets/logos/ubt-logo.png" class="login-logo" alt="UBT">
-    <h1 data-i18n="brand.en">Student Activities Hub</h1>
-    <h2 data-i18n="brand.ar">منصة الأنشطة الطلابية</h2>
+    <h1>Student Activities Hub</h1>
+    <h2>منصة الأنشطة الطلابية</h2>
     <p>منصة موحدة لإدارة خدمات وأنشطة عمادة شؤون الطلاب.</p>
     <input value="h.alhussain@ubt.edu.sa" aria-label="University email">
     <button id="enterApp" class="btn primary wide">تسجيل الدخول عبر Microsoft</button>
@@ -32,30 +32,26 @@
     <h1>Student Activities Hub</h1>
     <p>منصة الأنشطة الطلابية</p>
   </div>
-  <div class="app-controls">
-    <button id="themeToggle" class="control-btn" title="Theme">🌙</button>
-    <button id="langToggle" class="control-btn" title="Language">EN</button>
-  </div>
-  <div class="user-chip"><div><strong data-i18n="user.hello">مرحباً، حسام الحسين</strong><span data-i18n="user.role">مسؤول تطوير منصة الأنشطة الطلابية</span></div><div class="avatar">ح</div></div>
+  <div class="user-chip"><div><strong>مرحباً، حسام الحسين</strong><span>مسؤول تطوير منصة الأنشطة الطلابية</span></div><div class="avatar">ح</div></div>
 </header>
 <div class="layout">
   <aside class="sidebar">
-    <div class="side-logo identity-card"><img src="assets/images/sah-identity-card.png" alt="Student Activities Hub"></div>
+    <div class="side-logo"><img src="assets/logos/ubt-logo.png" alt="UBT"><img src="assets/logos/dsa-logo.png" alt="DSA"></div>
     <nav class="nav">
-      <button data-page="home"><span data-i18n="nav.home">الرئيسية</span><small data-icon="home"></small></button>
-      <button data-page="sports"><span data-i18n="nav.sports" data-i18n="sports.title">الإدارة الرياضية</span><small data-icon="trophy"></small></button>
-      <button data-page="indicator"><span data-i18n="nav.indicator" data-i18n="indicator.title">مؤشر الأداء الرياضي</span><small data-icon="chart"></small></button>
-      <button data-page="scholarships"><span data-i18n="nav.scholarships">المنح الرياضية</span><small data-icon="award"></small></button>
-      <button data-page="agreement"><span data-i18n="nav.agreement">الإقرار الإلكتروني للمنح</span><small data-icon="pen"></small></button>
-      <button data-page="championships"><span data-i18n="nav.championships">البطولات الرياضية</span><small data-icon="calendar"></small></button>
-      <button data-page="athletes"><span data-i18n="nav.athletes">ملف الطالب الرياضي</span><small data-icon="users"></small></button>
-      <button data-page="activities"><span data-i18n="nav.activities">الأنشطة الطلابية العامة</span><small data-icon="activity"></small></button>
-      <button data-page="volunteer"><span data-i18n="nav.volunteer">العمل التطوعي</span><small data-icon="heart"></small></button>
-      <button data-page="student"><span data-i18n="nav.student">بوابة الطالب</span><small data-icon="student"></small></button>
-      <button data-page="calendar"><span data-i18n="nav.calendar">التقويم الموحد</span><small data-icon="calendar"></small></button>
-      <button data-page="requests"><span data-i18n="nav.requests">طلبات التسجيل</span><small data-icon="inbox"></small></button>
-      <button data-page="reports"><span data-i18n="nav.reports">التقارير والتحليلات</span><small data-icon="briefcase"></small></button>
-      <button data-page="audit"><span data-i18n="nav.audit">سجل العمليات</span><small data-icon="log"></small></button>
+      <button data-page="home"><span>الرئيسية</span><small data-icon="home"></small></button>
+      <button data-page="sports"><span>الإدارة الرياضية</span><small data-icon="trophy"></small></button>
+      <button data-page="indicator"><span>مؤشر الأداء الرياضي</span><small data-icon="chart"></small></button>
+      <button data-page="scholarships"><span>المنح الرياضية</span><small data-icon="award"></small></button>
+      <button data-page="agreement"><span>الإقرار الإلكتروني للمنح</span><small data-icon="pen"></small></button>
+      <button data-page="championships"><span>البطولات الرياضية</span><small data-icon="calendar"></small></button>
+      <button data-page="athletes"><span>ملف الطالب الرياضي</span><small data-icon="users"></small></button>
+      <button data-page="activities"><span>الأنشطة الطلابية العامة</span><small data-icon="activity"></small></button>
+      <button data-page="volunteer"><span>العمل التطوعي</span><small data-icon="heart"></small></button>
+      <button data-page="student"><span>بوابة الطالب</span><small data-icon="student"></small></button>
+      <button data-page="calendar"><span>التقويم الموحد</span><small data-icon="calendar"></small></button>
+      <button data-page="requests"><span>طلبات التسجيل</span><small data-icon="inbox"></small></button>
+      <button data-page="reports"><span>التقارير والتحليلات</span><small data-icon="briefcase"></small></button>
+      <button data-page="audit"><span>سجل العمليات</span><small data-icon="log"></small></button>
     </nav>
   </aside>
   <main class="main">
@@ -64,19 +60,19 @@
       <div class="hero home-hero">
         <div class="hero-img" style="background-image:url('assets/images/campus-wide.jpg')"></div>
         <div class="hero-content">
-          <span class="eyebrow" data-i18n="home.eyebrow">عمادة شؤون الطلاب</span>
-          <h2 data-i18n="home.title">منصة واحدة لإدارة الأنشطة والخدمات الطلابية</h2>
+          <span class="eyebrow">عمادة شؤون الطلاب</span>
+          <h2>منصة واحدة لإدارة الأنشطة والخدمات الطلابية</h2>
           <p>بوابة مؤسسية تجمع الإدارة الرياضية، الأنشطة الطلابية، العمل التطوعي، التقويم، وبوابة الطالب بهوية جامعة الأعمال والتكنولوجيا.</p>
-          <div class="btns"><button class="btn primary" data-route="sports" data-i18n="btn.sports">الدخول للإدارة الرياضية</button><button class="btn secondary" data-route="student" data-i18n="btn.student">عرض بوابة الطالب</button></div>
+          <div class="btns"><button class="btn primary" data-route="sports">الدخول للإدارة الرياضية</button><button class="btn secondary" data-route="student">عرض بوابة الطالب</button></div>
         </div>
       </div>
-      <div class="section-title"><div><h3 data-i18n="home.modules">وحدات المنصة</h3><p>كل وحدة لها صلاحياتها وبياناتها، والطالب يشاهد ما يهمه في بوابة واحدة.</p></div></div>
+      <div class="section-title"><div><h3>وحدات المنصة</h3><p>كل وحدة لها صلاحياتها وبياناتها، والطالب يشاهد ما يهمه في بوابة واحدة.</p></div></div>
       <div class="grid cols-3">
         <div class="card module-card" data-route="sports"><div><div class="iconbox" data-icon="trophy"></div><h4>الإدارة الرياضية</h4><p>المؤشر، المنح، الإقرار الإلكتروني، البطولات، ملفات الرياضيين، والتقارير.</p></div><span class="pill">وحدة مستقلة</span></div>
         <div class="card module-card" data-route="activities"><div><div class="iconbox" data-icon="activity"></div><h4>الأنشطة الطلابية العامة</h4><p>الأندية، الفعاليات، المبادرات، الأعضاء، وفرص المشاركة.</p></div><span class="pill burg">طلاب / طالبات</span></div>
         <div class="card module-card" data-route="volunteer"><div><div class="iconbox" data-icon="heart"></div><h4>العمل التطوعي</h4><p>فرص تطوعية واحتساب ساعات بناءً على الضوابط اللاصفية المعتمدة.</p></div><span class="pill">محرك ساعات</span></div>
       </div>
-      <div class="section-title"><div><h3 data-i18n="home.dataSummary">ملخص البيانات المستوردة</h3><p>الأرقام التالية مستخرجة من الملفات المعتمدة المرفوعة: قوائم المنح، روزنامة الاتحاد، ودليل مؤشر الأداء الرياضي.</p></div></div>
+      <div class="section-title"><div><h3>ملخص البيانات المستوردة</h3><p>الأرقام التالية مستخرجة من الملفات المعتمدة المرفوعة: قوائم المنح، روزنامة الاتحاد، ودليل مؤشر الأداء الرياضي.</p></div></div>
       <div class="grid cols-4">
         <div class="card stat"><div class="label">طلاب المنح الرياضية</div><div class="value" id="homeMaleScholarships">0</div><div class="sub">ربيع 2026</div></div>
         <div class="card stat burg"><div class="label">طالبات المنح الرياضية</div><div class="value" id="homeFemaleScholarships">0</div><div class="sub">ربيع 2026</div></div>
@@ -88,7 +84,7 @@
     <section id="page-sports" class="page">
       <div class="hero">
         <div class="hero-img" style="background-image:url('assets/images/basketball-match.jpg')"></div>
-        <div class="hero-content"><span class="eyebrow" data-i18n="sports.eyebrow">وحدة الإدارة الرياضية</span><h2 data-i18n="sports.heroTitle">كل ما يخص الرياضة في صفحة واحدة</h2><p>المؤشر، المنح، الإقرار الإلكتروني، البطولات، ملفات الطلاب الرياضيين، التحليل، وسجل العمليات داخل وحدة الإدارة الرياضية.</p><div class="btns"><button class="btn primary" data-route="indicator">مؤشر الأداء الرياضي</button><button class="btn secondary" data-route="athletes">ملف الطالب الرياضي</button></div></div>
+        <div class="hero-content"><span class="eyebrow">وحدة الإدارة الرياضية</span><h2>كل ما يخص الرياضة في صفحة واحدة</h2><p>المؤشر، المنح، الإقرار الإلكتروني، البطولات، ملفات الطلاب الرياضيين، التحليل، وسجل العمليات داخل وحدة الإدارة الرياضية.</p><div class="btns"><button class="btn primary" data-route="indicator">مؤشر الأداء الرياضي</button><button class="btn secondary" data-route="athletes">ملف الطالب الرياضي</button></div></div>
       </div>
       <div class="grid cols-4">
         <div class="card stat"><div class="label">طلاب المنح</div><div class="value" id="sportsMale">0</div><div class="sub">من ملف الطلاب</div></div>
@@ -114,10 +110,10 @@
 
     <section id="page-indicator" class="page">
       <div class="section-title"><div><h3>مؤشر الأداء الرياضي</h3><p>الاحتساب مبني على دليل مؤشر الأداء الرياضي فقط.</p></div><a class="btn outline" href="assets/docs/sports-performance-indicator-guide.pdf" target="_blank">عرض الدليل</a></div>
-      <div class="reference-card"><div><h4 data-i18n="indicator.referenceTitle">مرجعية احتساب المؤشر</h4><p data-i18n="indicator.referenceText">يعتمد احتساب المؤشر على دليل مؤشر الأداء الرياضي الصادر من الاتحاد السعودي للرياضة الجامعية.</p></div><img src="assets/logos/susf-logo.png" alt="SUSF"></div>
+      <div class="reference-card"><div><h4>مرجعية احتساب المؤشر</h4><p>يعتمد احتساب المؤشر على دليل مؤشر الأداء الرياضي الصادر من الاتحاد السعودي للرياضة الجامعية.</p></div><img src="assets/logos/susf-logo.png" alt="SUSF"></div>
       <div class="grid cols-2">
-        <div class="card indicator-card"><h4 data-i18n="indicator.male">مؤشر الأداء الرياضي - الطلاب</h4><div class="donut" id="maleDonut"><b id="malePct">0%</b></div><div class="points" id="malePoints">0 / 0 نقطة</div><p>لا يتم جمع هذا المؤشر مع مؤشر الطالبات.</p></div>
-        <div class="card indicator-card burg"><h4 data-i18n="indicator.female">مؤشر الأداء الرياضي - الطالبات</h4><div class="donut burg" id="femaleDonut"><b id="femalePct">0%</b></div><div class="points" id="femalePoints">0 / 0 نقطة</div><p>مؤشر مستقل حسب نفس المجالات والمسارات.</p></div>
+        <div class="card indicator-card"><h4>مؤشر الأداء الرياضي - الطلاب</h4><div class="donut" id="maleDonut"><b id="malePct">0%</b></div><div class="points" id="malePoints">0 / 0 نقطة</div><p>لا يتم جمع هذا المؤشر مع مؤشر الطالبات.</p></div>
+        <div class="card indicator-card burg"><h4>مؤشر الأداء الرياضي - الطالبات</h4><div class="donut burg" id="femaleDonut"><b id="femalePct">0%</b></div><div class="points" id="femalePoints">0 / 0 نقطة</div><p>مؤشر مستقل حسب نفس المجالات والمسارات.</p></div>
       </div>
       <div class="grid cols-4">
         <div class="card stat"><div class="label">نقاط الطلاب المحققة</div><div class="value" id="maleAchieved">0</div><div class="sub">من أصل نقاط الدليل</div></div>
